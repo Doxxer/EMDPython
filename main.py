@@ -17,8 +17,7 @@ PREDICTION_COEFFICIENT = 0.02
 
 
 def distance(x, y):
-    # return abs((x[0] - y[0]) + (x[1] - y[1]))
-    return sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) + 1000 * abs(x[2] ** 8 - y[2] ** 8) ** 3
+    return sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) + 100 * abs(x[2] - y[2]) ** 3
 
 
 errors = []
@@ -50,7 +49,7 @@ def predict(clusters, matrix):
 
 if __name__ == "__main__":
     np.set_printoptions(precision=4, threshold='nan', linewidth='nan')
-    data_matrix = get_data_from_json("data/10_10_S.json")
+    data_matrix = get_data_from_json("data/full.json")
     Cluster.clusterize(data_matrix)
 
     with open('clusters.pkl') as f:
