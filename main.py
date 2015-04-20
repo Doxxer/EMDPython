@@ -6,6 +6,7 @@ from math import sqrt
 
 import numpy as np
 from pandas import crosstab
+
 import Cluster
 
 from dataFromJSON import get_data_from_json
