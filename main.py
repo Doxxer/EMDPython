@@ -49,7 +49,7 @@ def predict(clusters, matrix):
 
 if __name__ == "__main__":
     np.set_printoptions(precision=4, threshold='nan', linewidth='nan')
-    data_matrix = get_data_from_json("data/full.json")
+    data_matrix = get_data_from_json("data/10_5_S.json")
     Cluster.clusterize(data_matrix)
 
     with open('clusters.pkl') as f:

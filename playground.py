@@ -1,5 +1,6 @@
 __author__ = 'doxer'
 
-n = 8
+n = 13
+a = 0 if n < 8 else float('nan')
 
-print pow(16, 1/4.0)
+print a
