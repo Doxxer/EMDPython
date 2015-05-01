@@ -20,6 +20,8 @@ fin = {'O': 1, 'ok': 1, '1': 1, '2': 1, '3': 1, '4': 1, '5': 1, '6': 1, '9': 1, 
 
 def parse_gesture(gesture):
     tag = gesture['tag']
+    if tag == '2h_diff':
+        return
     x = gesture['x']
     y = gesture['y']
     t = gesture['t']
